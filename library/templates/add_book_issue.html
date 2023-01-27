@@ -1,5 +1,5 @@
-<title>Add Book Issue</title>
-{% extends 'base.html' %}
+<title>Home</title>
+{% extends 'index.html' %}
 
 <body>
 {% block content %}
@@ -22,8 +22,8 @@
         <div><input type="text" placeholder="Quick Book Search" id="quick_book_search" onkeyup="Quick_book_search()">
             <div id="quick_book_search_view"></div>
         </div>
-        <select name="book_instance" required id="id_book_instance">
-            <option value="" selected>---------</option>
+        <select name="book_instance" required id="id_book_instance" class="selectionbookstudents">
+            <option value="" selected>Choose Books...</option>
             {%for i in book%}
                 <option class="selection" value="{{i.id}}">{{i.book.book_title}} (: {{i.id}})</option>
             {%endfor%}

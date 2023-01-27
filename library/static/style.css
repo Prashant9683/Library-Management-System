@@ -157,6 +157,15 @@ section:nth-child(even){
     padding: 1rem 0;
 }
 
+.label-box {
+    width: 100%;
+    margin:.7rem 0;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    padding: 1rem;
+}
+
 .icons-container{
     display: grid;
     gap:2rem;
@@ -247,7 +256,6 @@ section:nth-child(even){
 }
 
 .book .row{
-    width: max-content;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -264,7 +272,6 @@ section:nth-child(even){
     width: 100%;
     flex:1 1 45rem;
     background: #fff;
-    margin-bottom: 100px;
     border:var(--border);
     /* box-shadow: var(--box-shadow); */
     text-align: center;

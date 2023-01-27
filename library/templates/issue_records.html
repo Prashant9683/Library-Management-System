@@ -1,8 +1,63 @@
-<title> Issue Records </title>
-{% extends 'base.html' %}
 
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Issue Records </title>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'view_book.css' %}">
+    <script src="{% static 'script.js' %}"></script>
+    <script src="https://kit.fontawesome.com/1b5555827c.js" crossorigin="anonymous"></script>
+
+</head>
 <body>
-{% block content %}
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fa-solid fa-book"></i> LMS </a>
+    
+        <nav class="navbar">
+            <a href="http://127.0.0.1:8000">home</a>
+            <a href="http://127.0.0.1:8000/add_new_book">add books</a>
+            <a href="http://127.0.0.1:8000/view_books">book</a>
+            <a href="http://127.0.0.1:8000/add_new_student">add students</a>
+            <a href="http://127.0.0.1:8000/show_students">student</a>
+            <a href="http://127.0.0.1:8000/view_books_issued">book issued</a>
+        </nav>
+    
+        <div id="menu-btn" class="fas fa-bars"></div>
+    
+    </header>
+    
+    <div id="menu-btn" class="fas fa-bars"></div>  
+    
+    <section class="home" id="home">
+    
+        <div class="content">
+    
+            <h3>Search book issue here</h3>
+            <p>This is the record of book issue.</p>
+    
+        </div>
+    
+    </section>
+    
+    <div class="search">
+        <input type="text" class="form-control" id="books_search_input" name="book_name" placeholder="Search a book" onkeyup="search_books()">
+        <!-- <br> -->
+        <div id="book_searched">
+            <label>Search Results</label>
+        </div>
+    </div>
+
 <table class="table table-striped">
 <tr>
     <th>Student name </th>
@@ -40,6 +95,5 @@
     </tr> {% endfor %}
 </table>
 
-{% endblock %}
 </body>
 </html>
